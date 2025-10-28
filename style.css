@@ -1,0 +1,67 @@
+:root{
+  --bg: #ffffff;
+  --card: #f6f8fa;
+  --accent: #ff6b6b;
+  --muted: #6b7280;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, #fbfdff 0%, #f8fbff 100%);
+  color:#0f1724;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:100vh;
+  padding:20px;
+}
+#app{width:100%;max-width:920px}
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:var(--card);
+  padding:12px 16px;
+  border-radius:12px;
+  box-shadow:0 6px 24px rgba(15,23,36,0.04);
+}
+h1{margin:0;font-size:20px}
+.balance{font-weight:700;color:var(--accent)}
+.cases{
+  display:flex;
+  gap:14px;
+  overflow-x:auto;
+  padding:18px;
+  margin:18px 0;
+}
+.case-card{
+  min-width:240px;
+  background:linear-gradient(180deg,#fff 0%, #f3f7ff 100%);
+  border-radius:12px;
+  padding:16px;
+  box-shadow:0 8px 30px rgba(16,24,40,0.06);
+  flex-shrink:0;
+  cursor:pointer;
+  transition:transform .25s ease, box-shadow .25s ease;
+  border:2px solid transparent;
+}
+.case-card:hover{transform:translateY(-6px); box-shadow:0 18px 40px rgba(16,24,40,0.08)}
+.case-selected{border-color:rgba(255,107,107,0.18)}
+.case-title{font-weight:800;margin-bottom:6px}
+.case-price{color:var(--muted);margin-bottom:8px}
+.case-sub{font-size:13px;color:#334155}
+.controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.select-wrap{display:flex;gap:8px;align-items:center}
+.btn{padding:10px 14px;border-radius:10px;border:none;cursor:pointer;font-weight:700}
+.btn.primary{background:var(--accent);color:white}
+.btn.secondary{background:transparent;border:1px solid rgba(15,23,36,0.06);color:var(--accent)}
+.btn.light{background:#eef2ff;border:1px solid rgba(99,102,241,0.06);color:#334155}
+.result{margin-top:18px;padding:14px;border-radius:12px;background:linear-gradient(180deg,#ffffff,#fafbff);box-shadow:0 8px 30px rgba(16,24,40,0.04);text-align:center}
+.hidden{display:none}
+.reward{font-weight:900;font-size:20px;color:#0b1220;padding:10px 14px;border-radius:8px;background:linear-gradient(90deg,#fff4f4,#fff9f0)}
+footer{margin-top:14px;color:var(--muted);text-align:center;font-size:13px}
+@media (max-width:640px){
+  .case-card{min-width:200px}
+  header{flex-direction:column;gap:8px;align-items:flex-start}
+}

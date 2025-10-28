@@ -1,0 +1,10 @@
+{
+  "name": "GusGiftBot WebApp",
+  "short_name": "GusGift",
+  "description": "GusGiftBot Web App for opening cases and integrating TON wallet",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" }
+  ],
+  "start_url": "/",
+  "display": "standalone"
+}
