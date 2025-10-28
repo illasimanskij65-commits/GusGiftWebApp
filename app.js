@@ -146,3 +146,4 @@ connectTonBtn.addEventListener('click', tonConnectInit);
 renderCases();
 updateBalanceUI();
 requestBalanceFromBot();
+<script src="app.js"></script>
