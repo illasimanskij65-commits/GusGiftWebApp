@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GusGiftBot — Open Case</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script src="https://unpkg.com/@tonconnect/sdk/dist/tonconnect.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>GusGiftBot</h1>
+      <div id="balance" class="balance">❤️ 0</div>
+    </header>
+
+    <main>
+      <section class="cases" id="cases"></section>
+
+      <div class="controls">
+        <button id="connectTon" class="btn light">Підключити TON-гаманець</button>
+        <div class="select-wrap">
+          <select id="caseSelect" aria-label="Вибір кейсу"></select>
+          <button id="openBtn" class="btn primary">Відкрити кейс</button>
+        </div>
+      </div>
+
+      <div id="result" class="result hidden">
+        <h2>Випав приз</h2>
+        <div id="reward" class="reward">—</div>
+        <button id="closeBtn" class="btn secondary">Готово</button>
+      </div>
+
+      <footer>
+        <small>GusGiftBot — 1 зірка = 1 ❤️ • Всі зірки йдуть до @Ilya77kk</small>
+      </footer>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
